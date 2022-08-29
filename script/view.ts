@@ -16,7 +16,6 @@ export default class View {
      </div>`;
     };
 
-    
     //função criar produto
     ListenClickButton() {
         

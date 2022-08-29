@@ -17,7 +17,6 @@ export default class Controller {
 
         //chamando a função da view
         this.View.renderProduct();
-        
 
     };
 

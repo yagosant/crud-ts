@@ -17,6 +17,7 @@ const nameProduct:HTMLElement | null= document.getElementById('name'); //defino 
 const brandProduct:HTMLElement | null= document.getElementById('brand');
 const priceProduct:HTMLElement | null= document.getElementById('price');
 
+//criando um prod mockado para testar o retorno no localstorage
 const product = {
     id: 1,
     name: 'feijao',

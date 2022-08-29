@@ -17,6 +17,7 @@ const createProduct = document.getElementById('create-product');
 const nameProduct = document.getElementById('name'); //defino o tipo da variavel u passo como nulo, pego o elemento no html pelo ID
 const brandProduct = document.getElementById('brand');
 const priceProduct = document.getElementById('price');
+//criando um prod mockado para testar o retorno no localstorage
 const product = {
     id: 1,
     name: 'feijao',
