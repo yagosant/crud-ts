@@ -5,7 +5,7 @@ class View {
     constructor() {
     }
     ;
-    //funcção para renderizar os itens
+    //função para renderizar os itens
     renderProduct(product) {
         const productListEement = document.getElementById('product-list');
         // vai add na tela os itens
@@ -13,6 +13,10 @@ class View {
             productListEement.innerHTML += `<div class="product-item">
        ${product.name} - R$${product.price} - ${product.quantity}
      </div>`;
+    }
+    ;
+    //função criar produto
+    ListenClickButton() {
     }
 }
 exports.default = View;

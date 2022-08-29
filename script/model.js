@@ -5,7 +5,7 @@ class Model {
     }
     ;
     //salvando no local storage
-    saveProductToLOcalStorage(product) {
+    saveProductToLocalStorage(product) {
         var _a;
         //resgata os itens
         const productsLocalStorage = JSON.parse((_a = localStorage.getItem('products')) !== null && _a !== void 0 ? _a : "[]");

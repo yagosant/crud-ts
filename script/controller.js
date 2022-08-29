@@ -7,7 +7,8 @@ class Controller {
     }
     ;
     addProductToList() {
-        //chamanado a função da view
+        const containerResultado = document.getElementById('container-resultado'); //div que vai receber o resultado renderizado
+        //chamando a função da view
         this.View.renderProduct();
     }
     ;

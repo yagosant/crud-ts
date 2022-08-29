@@ -11,11 +11,24 @@
     <h1 id="title"></h1>
     
     <main >
-    
+    <h2>Lista de produtos</h2>
     <ul id="product-list">
       
     </ul>
     </main>
+
+    <div class="create-product-div">
+      <form action="" method="post" id="create-product">
+        <label for="name">Nome Produto:</label>
+        <input type="text" name="name" id="name">
+        <label for="brand">Marca:</label>
+        <input type="text" name="brand" id="brand">
+        <label for="price">Preço:</label>
+        <input type="number" name="price" id="price">
+
+        <button type="submit" id = "cadastrar"> Cadastrar</button>
+      </form>
+    </div>
     
     
     
@@ -23,6 +36,6 @@
     
     
     
-    <script src="index.js"></script> 
+    <script src="script/index.js"></script> 
   </body>
 </html>

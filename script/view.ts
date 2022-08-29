@@ -6,7 +6,7 @@ export default class View {
         
     };
 
-    //funcção para renderizar os itens
+    //função para renderizar os itens
     renderProduct(product:Product){
         const productListEement = document.getElementById('product-list');
 
@@ -14,5 +14,11 @@ export default class View {
        if(productListEement) productListEement.innerHTML += `<div class="product-item">
        ${product.name} - R$${product.price} - ${product.quantity}
      </div>`;
+    };
+
+    
+    //função criar produto
+    ListenClickButton() {
+        
     }
 }

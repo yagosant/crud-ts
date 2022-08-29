@@ -6,7 +6,7 @@ export default class Model {
     };
 
     //salvando no local storage
-    saveProductToLOcalStorage(product: Product){
+    saveProductToLocalStorage(product: Product){
 
         //resgata os itens
         const productsLocalStorage = JSON.parse(localStorage.getItem('products') ?? "[]");
