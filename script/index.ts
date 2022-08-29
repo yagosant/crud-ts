@@ -1,13 +1,13 @@
 //linkar as camadas do MVC
 
 //view <- controller ->model
-import Controller from "./controller";
-import Model from "./model";
-import View from "./view";
+import Controller from "./controller.js";
+import Model from "./model.js";
+import View from "./view.js";
 
 //criando a instancia
 const ViewInstance = new View();
-const ModelInstance = new Model()
+const ModelInstance = new Model();
 const ControllerInstance = new Controller(ViewInstance, ModelInstance);
 
 const cadastrar = document.getElementById('cadastrar'); //dado do boão calcular

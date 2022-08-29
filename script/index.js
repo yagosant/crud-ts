@@ -5,13 +5,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 //view <- controller ->model
-const controller_1 = __importDefault(require("./controller"));
-const model_1 = __importDefault(require("./model"));
-const view_1 = __importDefault(require("./view"));
+const controller_js_1 = __importDefault(require("./controller.js"));
+const model_js_1 = __importDefault(require("./model.js"));
+const view_js_1 = __importDefault(require("./view.js"));
 //criando a instancia
-const ViewInstance = new view_1.default();
-const ModelInstance = new model_1.default();
-const ControllerInstance = new controller_1.default(ViewInstance, ModelInstance);
+const ViewInstance = new view_js_1.default();
+const ModelInstance = new model_js_1.default();
+const ControllerInstance = new controller_js_1.default(ViewInstance, ModelInstance);
 const cadastrar = document.getElementById('cadastrar'); //dado do boão calcular
 const createProduct = document.getElementById('create-product');
 const nameProduct = document.getElementById('name'); //defino o tipo da variavel u passo como nulo, pego o elemento no html pelo ID
