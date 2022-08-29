@@ -1,22 +1,22 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 //criando a classe
-class View {
-    constructor() {
+var View = /** @class */ (function () {
+    function View() {
     }
     ;
     //função para renderizar os itens
-    renderProduct(product) {
-        const productListEement = document.getElementById('product-list');
+    View.prototype.renderProduct = function (product) {
+        var productListEement = document.getElementById('product-list');
         // vai add na tela os itens
         if (productListEement)
-            productListEement.innerHTML += `<div class="product-item">
-       ${product.name} - R$${product.price} - ${product.quantity}
-     </div>`;
-    }
+            productListEement.innerHTML += "<div class=\"product-item\">\n       ".concat(product.name, " - R$").concat(product.price, " - ").concat(product.quantity, "\n     </div>");
+    };
     ;
     //função criar produto
-    ListenClickButton() {
-    }
-}
-exports.default = View;
+    View.prototype.ListenClickButton = function (event) {
+        //evita que recarregue
+        event.preventDefault();
+        alert("oiee");
+    };
+    return View;
+}());
+export default View;

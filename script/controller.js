@@ -1,28 +1,27 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class Controller {
-    constructor(View, Model) {
+var Controller = /** @class */ (function () {
+    function Controller(View, Model) {
         this.View = View;
         this.Model = Model;
     }
     ;
-    addProductToList() {
-        const containerResultado = document.getElementById('container-resultado'); //div que vai receber o resultado renderizado
+    Controller.prototype.addProductToList = function () {
+        var containerResultado = document.getElementById('container-resultado'); //div que vai receber o resultado renderizado
         //chamando a função da view
         this.View.renderProduct();
-    }
+    };
     ;
-    generateUniqueId(products) {
+    Controller.prototype.generateUniqueId = function (products) {
         //map recebe 3 parametros nome index e array, os dois ultimos n são obrigatorios
-        const ids = products.map(function (product) {
+        var ids = products.map(function (product) {
             return product.id;
         });
         //sortear e order o array, sort passa dois parametros
-        const sortedIds = ids.sort(function (a, b) {
+        var sortedIds = ids.sort(function (a, b) {
             return a - b; //faz de modo crescente
         });
-        const lastId = sortedIds[sortedIds.length - 1]; //ex se for 3 o ultimo é 4
+        var lastId = sortedIds[sortedIds.length - 1]; //ex se for 3 o ultimo é 4
         return lastId + 1;
-    }
-}
-exports.default = Controller;
+    };
+    return Controller;
+}());
+export default Controller;

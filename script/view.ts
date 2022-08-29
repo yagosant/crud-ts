@@ -17,7 +17,11 @@ export default class View {
     };
 
     //função criar produto
-    ListenClickButton() {
+    ListenClickButton(event: SubmitEvent) {
+
+        //evita que recarregue
+        event.preventDefault();
+        alert("oiee");
         
     }
 }

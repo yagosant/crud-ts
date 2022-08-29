@@ -1,24 +1,19 @@
-"use strict";
 //linkar as camadas do MVC
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
 //view <- controller ->model
-const controller_js_1 = __importDefault(require("./controller.js"));
-const model_js_1 = __importDefault(require("./model.js"));
-const view_js_1 = __importDefault(require("./view.js"));
+import Controller from "./controller.js";
+import Model from "./model.js";
+import View from "./view.js";
 //criando a instancia
-const ViewInstance = new view_js_1.default();
-const ModelInstance = new model_js_1.default();
-const ControllerInstance = new controller_js_1.default(ViewInstance, ModelInstance);
-const cadastrar = document.getElementById('cadastrar'); //dado do boão calcular
-const createProduct = document.getElementById('create-product');
-const nameProduct = document.getElementById('name'); //defino o tipo da variavel u passo como nulo, pego o elemento no html pelo ID
-const brandProduct = document.getElementById('brand');
-const priceProduct = document.getElementById('price');
+var ViewInstance = new View();
+var ModelInstance = new Model();
+var ControllerInstance = new Controller(ViewInstance, ModelInstance);
+var cadastrar = document.getElementById('cadastrar'); //dado do boão calcular
+var createProduct = document.getElementById('create-product');
+var nameProduct = document.getElementById('name'); //defino o tipo da variavel u passo como nulo, pego o elemento no html pelo ID
+var brandProduct = document.getElementById('brand');
+var priceProduct = document.getElementById('price');
 //criando um prod mockado para testar o retorno no localstorage
-const product = {
+var product = {
     id: 1,
     name: 'feijao',
     brand: 'Tio Joao',
