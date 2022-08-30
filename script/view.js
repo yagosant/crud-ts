@@ -17,6 +17,23 @@ var View = /** @class */ (function () {
         event.preventDefault();
         alert("oiee");
     };
+    //função de listagem
+    View.prototype.handleAddEventListener = function () {
+        var addButtonElement = document.getElementById('cadastrar');
+        var formElement = document.getElementById('create-product');
+        addButtonElement.addEventListener('submit', function (event) {
+            //vai receber um default o obj evento, impede que ele carregue novamente
+            event === null || event === void 0 ? void 0 : event.preventDefault();
+            console.log(event);
+        });
+        /* (addButtonElement as HTMLFormElement).addEventListener('formdata', (event: FormDataEvent) => {
+            //pega os dados
+            alert('Lula');
+            console.log(event);
+            
+        }); */
+    };
+    ;
     return View;
 }());
 export default View;

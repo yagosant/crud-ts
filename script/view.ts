@@ -24,4 +24,26 @@ export default class View {
         alert("oiee");
         
     }
+
+    //função de listagem
+    handleAddEventListener(){
+        const addButtonElement = document.getElementById('cadastrar');
+        const formElement = document.getElementById('create-product');
+
+        (addButtonElement as HTMLFormElement).addEventListener('submit', (event: SubmitEvent) => {
+            //vai receber um default o obj evento, impede que ele carregue novamente
+            event?.preventDefault();
+ 
+            console.log(event);
+        });
+
+        
+
+        /* (addButtonElement as HTMLFormElement).addEventListener('formdata', (event: FormDataEvent) => {
+            //pega os dados
+            alert('Lula');
+            console.log(event);
+            
+        }); */
+    };
 }

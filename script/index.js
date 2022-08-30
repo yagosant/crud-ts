@@ -13,7 +13,7 @@ var nameProduct = document.getElementById('name'); //defino o tipo da variavel u
 var brandProduct = document.getElementById('brand');
 var priceProduct = document.getElementById('price');
 //criando um prod mockado para testar o retorno no localstorage
-var product = {
+/* const product = {
     id: 1,
     name: 'feijao',
     brand: 'Tio Joao',
@@ -21,15 +21,24 @@ var product = {
     category: 'Food',
     active: true,
     quantity: 200
-};
+
+}; */
 //add eventos
-cadastrar === null || cadastrar === void 0 ? void 0 : cadastrar.addEventListener('click', function () {
-    cadastrarClick;
+/* cadastrar?.addEventListener('click',function () {
+    cadastrarClick
 });
-// 
+
+//
 function cadastrarClick() {
-    console.log('Ola eu to na index ts');
-    createProduct === null || createProduct === void 0 ? void 0 : createProduct.addEventListener("submit", ViewInstance.ListenClickButton);
+    
+   console.log('Ola eu to na index ts');
+   
+    (createProduct as HTMLFormElement)?.addEventListener("submit", ViewInstance.ListenClickButton);
     ModelInstance.saveProductToLocalStorage(product);
-}
-cadastrarClick();
+
+} */
+//função auto invocada ela é lida e invocada
+//ViewInstance.renderProduct({})();
+(function start() {
+    ViewInstance.handleAddEventListener();
+})();

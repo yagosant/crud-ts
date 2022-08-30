@@ -18,7 +18,7 @@ const brandProduct:HTMLElement | null= document.getElementById('brand');
 const priceProduct:HTMLElement | null= document.getElementById('price');
 
 //criando um prod mockado para testar o retorno no localstorage
-const product = {
+/* const product = {
     id: 1,
     name: 'feijao',
     brand: 'Tio Joao',
@@ -27,10 +27,10 @@ const product = {
     active: true,
     quantity: 200
 
-};
+}; */
 
 //add eventos
-cadastrar?.addEventListener('click',function () {
+/* cadastrar?.addEventListener('click',function () {
     cadastrarClick
 });
 
@@ -42,8 +42,12 @@ function cadastrarClick() {
     (createProduct as HTMLFormElement)?.addEventListener("submit", ViewInstance.ListenClickButton);
     ModelInstance.saveProductToLocalStorage(product);
 
-}
+} */
 
+//função auto invocada ela é lida e invocada
 
+//ViewInstance.renderProduct({})();
 
-cadastrarClick();
+(function start() {
+    ViewInstance.handleAddEventListener();
+})();

@@ -8,18 +8,11 @@
     <title>Curso TypeScript - Crud</title>
   </head>
   <body>
-    <h1 id="title"></h1>
-    
-    <main >
-    <h2>Lista de produtos</h2>
-    <ul id="product-list">
-      
-    </ul>
-    </main>
+   
 
     <div class="create-product-div">
       <h2>Cadastrar Produto</h2>
-      <form action="" method="post" id="create-product">
+      <form action="" method="post" id="create-product" class="create-product">
         <label for="name">Nome Produto:</label>
         <input type="text" name="name" id="name">
         <label for="brand">Marca:</label>
@@ -33,12 +26,34 @@
         <label for="active">Ativo:</label>
         <input type="text" name="active" id="brand">
 
-
-        <input type="submit" id = "cadastrar" value="Cadastrar">
+        <button type="submit" id = "cadastrar">Cadastrar</button>        
+          <input type="submit" id = "cadastrar" value="Cadastrar">
       </form>
     </div>
     
+    <h1 id="title"></h1>
     
+    <main >
+    <h2>Lista de produtos</h2>
+   <!--  <ul id="product-list"> -->
+      <table id="customers">
+        <tr>
+          <th>ID</th>
+          <th>NOME</th>
+          <th>CAREGORIA</th>
+          <th>QUANTIDADE </th>
+          <th>ATIVE</th>
+         
+        </tr>
+        <tr id="product-list">
+          <!-- <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>  -->
+        </tr>
+      </table>
+      
+    </ul>
+    </main>
     
     
     
