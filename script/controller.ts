@@ -1,6 +1,5 @@
+import { Model, View } from "../types/classes";
 import { Product } from "../types/product";
-import Model from "./model";
-import View from "./view";
 
 export default class Controller {
     View: any;
@@ -12,9 +11,7 @@ export default class Controller {
 
     
     addProductToList(){
-  
-        const containerResultado = document.getElementById('container-resultado'); //div que vai receber o resultado renderizado
-
+        alert("to aqui");
         //chamando a função da view
         this.View.renderProduct();
 

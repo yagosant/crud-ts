@@ -8,7 +8,7 @@ input, select{
    box-sizing: border-box;
 }
 
-input[type=submit]{
+button{
     width: 100%;
     background-color: #4caf50;
     color: white;
@@ -19,7 +19,7 @@ input[type=submit]{
     cursor: pointer;
 }
 
-input[type=submit]:hover{
+button:hover{
     background-color: #45a049;
 }
 
@@ -50,6 +50,6 @@ input[type=submit]:hover{
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #04AA6D;
+    background-color: #4caf50;
     color: white;
   }

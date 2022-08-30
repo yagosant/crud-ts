@@ -9,41 +9,40 @@ export default class View {
     //função para renderizar os itens
     renderProduct(product:Product){
         const productListEement = document.getElementById('product-list');
-
         // vai add na tela os itens
-       if(productListEement) productListEement.innerHTML += `<div class="product-item">
-       ${product.name} - R$${product.price} - ${product.quantity}
-     </div>`;
+
+       if(productListEement) productListEement.innerHTML += `
+       <tr>
+       <td>${product.id}</td>
+       <td>${product.name}</td>
+       <td>${product.price}</td>
+       <td>${product.brand}</td> 
+       <td>${product.quantity}</td>
+       </tr> `;
     };
 
-    //função criar produto
-    ListenClickButton(event: SubmitEvent) {
+    addProduct() {}
 
-        //evita que recarregue
-        event.preventDefault();
-        alert("oiee");
-        
-    }
+    eventListenerHandle() {
+    const formButtonElement = document.getElementById("addButton");
 
-    //função de listagem
-    handleAddEventListener(){
-        const addButtonElement = document.getElementById('cadastrar');
-        const formElement = document.getElementById('create-product');
+    formButtonElement?.addEventListener("click", () => {
+      const nameElement = document.getElementById("nameInput");
+      const brandElement = document.getElementById("brandInput");
+      const priceElement = document.getElementById("priceInput");
+      const categoryElement = document.getElementById("categoryInput");
+      const activeElement = document.getElementById("activeInput");
+      const quantityElement = document.getElementById("quantityInput");
 
-        (addButtonElement as HTMLFormElement).addEventListener('submit', (event: SubmitEvent) => {
-            //vai receber um default o obj evento, impede que ele carregue novamente
-            event?.preventDefault();
- 
-            console.log(event);
-        });
-
-        
-
-        /* (addButtonElement as HTMLFormElement).addEventListener('formdata', (event: FormDataEvent) => {
-            //pega os dados
-            alert('Lula');
-            console.log(event);
-            
-        }); */
-    };
+      this.renderProduct({
+        active: true,
+        brand: (brandElement as HTMLInputElement).value,
+        category: (categoryElement as HTMLInputElement).value,
+        id: 1,
+        name: (nameElement as HTMLInputElement).value,
+        price: parseInt((priceElement as HTMLInputElement).value),
+        quantity: parseInt((quantityElement as HTMLInputElement).value),
+      });
+    });
+  }
 }

@@ -5,7 +5,7 @@ var Controller = /** @class */ (function () {
     }
     ;
     Controller.prototype.addProductToList = function () {
-        var containerResultado = document.getElementById('container-resultado'); //div que vai receber o resultado renderizado
+        alert("to aqui");
         //chamando a função da view
         this.View.renderProduct();
     };

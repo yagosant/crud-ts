@@ -14,21 +14,18 @@
       <h2>Cadastrar Produto</h2>
       <form action="" method="post" id="create-product" class="create-product">
         <label for="name">Nome Produto:</label>
-        <input type="text" name="name" id="name">
+        <input placeholder="name" id="nameInput" />
         <label for="brand">Marca:</label>
-        <input type="text" name="brand" id="brand">
+        <input placeholder="brand" id="brandInput" />
         <label for="price">Preço:</label>
-        <input type="number" name="price" id="price">
+        <input placeholder="price" id="priceInput" />
         <label for="category">Categoria:</label>
-        <input type="text" name="category" id="brand">
+        <input placeholder="category" id="categoryInput" />
         <label for="quantity">Quantidade disponível:</label>
-        <input type="number" name="quantity" id="price">
-        <label for="active">Ativo:</label>
-        <input type="text" name="active" id="brand">
+        <input placeholder="quantity" id="quantityInput" />
 
-        <button type="submit" id = "cadastrar">Cadastrar</button>        
-          <input type="submit" id = "cadastrar" value="Cadastrar">
       </form>
+      <button id="addButton">Cadastrar</button>  
     </div>
     
     <h1 id="title"></h1>
@@ -37,19 +34,19 @@
     <h2>Lista de produtos</h2>
    <!--  <ul id="product-list"> -->
       <table id="customers">
-        <tr>
+        <thead>
           <th>ID</th>
           <th>NOME</th>
-          <th>CAREGORIA</th>
+          <th>PREÇO</th>
+          <th>CATEGORIA</th>
           <th>QUANTIDADE </th>
-          <th>ATIVE</th>
          
-        </tr>
-        <tr id="product-list">
-          <!-- <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>  -->
-        </tr>
+        </thead>
+        <tbody id="product-list">
+      
+        </tbody>
+        
+       
       </table>
       
     </ul>

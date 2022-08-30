@@ -8,32 +8,31 @@ var View = /** @class */ (function () {
         var productListEement = document.getElementById('product-list');
         // vai add na tela os itens
         if (productListEement)
-            productListEement.innerHTML += "<div class=\"product-item\">\n       ".concat(product.name, " - R$").concat(product.price, " - ").concat(product.quantity, "\n     </div>");
+            productListEement.innerHTML += "\n       <tr>\n       <td>".concat(product.id, "</td>\n       <td>").concat(product.name, "</td>\n       <td>").concat(product.price, "</td>\n       <td>").concat(product.brand, "</td> \n       <td>").concat(product.quantity, "</td>\n       </tr> ");
     };
     ;
-    //função criar produto
-    View.prototype.ListenClickButton = function (event) {
-        //evita que recarregue
-        event.preventDefault();
-        alert("oiee");
-    };
-    //função de listagem
-    View.prototype.handleAddEventListener = function () {
-        var addButtonElement = document.getElementById('cadastrar');
-        var formElement = document.getElementById('create-product');
-        addButtonElement.addEventListener('submit', function (event) {
-            //vai receber um default o obj evento, impede que ele carregue novamente
-            event === null || event === void 0 ? void 0 : event.preventDefault();
-            console.log(event);
+    View.prototype.addProduct = function () { };
+    View.prototype.eventListenerHandle = function () {
+        var _this = this;
+        var formButtonElement = document.getElementById("addButton");
+        formButtonElement === null || formButtonElement === void 0 ? void 0 : formButtonElement.addEventListener("click", function () {
+            var nameElement = document.getElementById("nameInput");
+            var brandElement = document.getElementById("brandInput");
+            var priceElement = document.getElementById("priceInput");
+            var categoryElement = document.getElementById("categoryInput");
+            var activeElement = document.getElementById("activeInput");
+            var quantityElement = document.getElementById("quantityInput");
+            _this.renderProduct({
+                active: true,
+                brand: brandElement.value,
+                category: categoryElement.value,
+                id: 1,
+                name: nameElement.value,
+                price: parseInt(priceElement.value),
+                quantity: parseInt(quantityElement.value),
+            });
         });
-        /* (addButtonElement as HTMLFormElement).addEventListener('formdata', (event: FormDataEvent) => {
-            //pega os dados
-            alert('Lula');
-            console.log(event);
-            
-        }); */
     };
-    ;
     return View;
 }());
 export default View;
